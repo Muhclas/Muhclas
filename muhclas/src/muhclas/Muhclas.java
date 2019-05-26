@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package muhclas;
 
 import java.util.Scanner;
 
 /**
  *
- * @author Muditra
+ * @author acer
  */
 public class Muhclas {
 
@@ -17,31 +18,35 @@ public class Muhclas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       System.out.println("E1E117046");
-        System.out.println("Muhclas Adi Putra");
+        System.out.println("Nama : Muhclas Adi Putra");
+        System.out.println("NIM :  E1E1 17 046\n");
         Scanner inputUser = new Scanner(System.in);
         int[] nilai = new int[7];
-        int kecil=999,besar=0,jumlah=0;
+        int nkecil=999;
+        int ntinggi=0;
+        int jml=0;
 		
         for (int i=1; i<=nilai.length; i++)
         {
-          System.out.print("Masukan Nilai ke-"+i+" = ");
+          System.out.print("Masukan Nilai Praktikum ke-"+i+" : ");
           nilai[i-1] = inputUser.nextInt();
 		  
-          if(nilai[i-1]<kecil)
-              kecil=nilai[i-1];
+          if(nilai[i-1]<nkecil)
+              nkecil=nilai[i-1];
 		  
-          if(nilai[i-1]>besar)
-              besar=nilai[i-1];
+          if(nilai[i-1]>ntinggi)
+              ntinggi=nilai[i-1];
 		  
-          jumlah+=nilai[i-1];
+          jml+=nilai[i-1];
 
         }
-        float rata=jumlah/nilai.length;
-		
-        System.out.println("Nilai terkecil = "+kecil);
-        System.out.println("Nilai terbesar = "+besar);
-        System.out.println("Nilai rata-rata = "+rata);
+        float rata=jml/nilai.length;
+        
+	System.out.println("\nNilai rata-rata praktikum : "+rata);	
+        System.out.println("Nilai tertinggi praktikum : "+ntinggi);
+        System.out.println("Nilai terendah praktikum : "+nkecil);
+        System.out.println("\n");
+       
 		
         for (int i=1; i<=nilai.length; i++)
         {  
